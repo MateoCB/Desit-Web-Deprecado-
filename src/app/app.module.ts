@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { AcercaComponent } from './acerca/acerca.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    AcercaComponent
+    AcercaComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

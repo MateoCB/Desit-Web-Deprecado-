@@ -1,0 +1,26 @@
+<p>..</p>
+<b></b>
+<b></b>
+<b></b>
+<b></b>
+<b></b>
+<b></b>
+<p>..</p>
+
+<div class="container">
+  <h1 class="text-success">Centrales de Monitoreo:</h1>
+
+  <div class="row table-primary">
+      <div class="col-3">Central</div>
+      <div class="col-5">Barrio</div>
+      <div class="col-2">Estado</div>
+      <div class="col-2">Acciones</div>
+  </div>
+
+  <div class="row {{central.Estado == 0 ? 'table-success' : 'table-danger'}}" *ngFor="let central of centrales">
+      <div class="col-3">{{central.Id}}</div>
+      <div class="col-5">{{central.Barrio}}</div>
+      <div class="col-2">{{central.Estado}}</div>
+      <div class="col-2">Acciones</div>
+  </div>
+</div>

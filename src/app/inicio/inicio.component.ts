@@ -9,9 +9,11 @@ import { HttpClient } from '@angular/common/http';
 export class InicioComponent implements OnInit {
 
   constructor(private http: HttpClient) {
-    this.http.get("api/values").subscribe(res => {
+
+    // TODO: ver acá como hace para obtener datos
+    /*this.http.get("api/values").subscribe(res => {
         console.log(res.toString());
-    });
+    });*/
   }
 
   ngOnInit() {
