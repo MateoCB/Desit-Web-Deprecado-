@@ -8,20 +8,23 @@ import { AdminComponent } from './admin/admin.component';
 const routes: Routes = [
   {
     path: '',
-    component: InicioComponent
+    component: InicioComponent,
+    runGuardsAndResolvers: 'always'
   },
   {
     path: 'acerca',
-    component: AcercaComponent
+    component: AcercaComponent,
+    runGuardsAndResolvers: 'always'
   },
   {
     path: 'admin',
-    component: AdminComponent
+    component: AdminComponent,
+    runGuardsAndResolvers: 'always'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

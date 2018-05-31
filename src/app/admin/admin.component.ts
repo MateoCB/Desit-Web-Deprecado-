@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 interface Central {
-  Id: string;
-  Barrio: string;
-  Estado: number;
+  id: string;
+  barrio: string;
+  estado: number;
 }
 
 @Component({
@@ -15,8 +14,11 @@ interface Central {
 export class AdminComponent implements OnInit {
 
   centrales: Central[];
+  estados: string[] = ['Nunca se conectó', 'Conectado', 'Desconectado', 'Pérdida de Conexión'];
   constructor(private http: HttpClient) {
-    this.centrales = [{Id: "asd", Barrio: "Alta Cba", Estado: 0}, {Id: "qqqqq", Barrio: "Alta qqqCba", Estado: 5}];
+    this.http.get<Central[]>('api/centrales').subscribe(res => {
+      this.centrales = res;
+    });
   }
 
   ngOnInit() {
