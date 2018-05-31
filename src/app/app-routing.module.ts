@@ -9,17 +9,17 @@ const routes: Routes = [
   {
     path: '',
     component: InicioComponent,
-    runGuardsAndResolvers: 'always'
+    runGuardsAndResolvers: 'always',
   },
   {
     path: 'acerca',
     component: AcercaComponent,
-    runGuardsAndResolvers: 'always'
+    runGuardsAndResolvers: 'always',
   },
   {
     path: 'admin',
     component: AdminComponent,
-    runGuardsAndResolvers: 'always'
+    runGuardsAndResolvers: 'always',
   }
 ];
 
