@@ -1,12 +1,7 @@
 /**
  * The WebSocketManager JavaScript Client. See https://github.com/radu-matei/websocket-manager/ for more information.
  */
-var WebSocketManager = (function () {
-    /**
-     * Create a new web socket manager.
-     * @param {any} url The web socket url (must start with ws://).
-     */
-    var constructor = function (url) {
+function WebSocketManager (url) {
         if (url === undefined) console.error("WebSocketManager constructor requires valid 'url'.");
         _this = this;
 
@@ -320,6 +315,3 @@ var WebSocketManager = (function () {
             )));
         }
     };
-
-    return constructor;
-})();
