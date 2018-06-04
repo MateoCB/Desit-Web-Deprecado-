@@ -1,25 +1,11 @@
+<!-- Espacios necesarios -->
 <p>.</p>
 <b></b>
 <p>.</p>
 
-<div class="container">
-    <h1 class="text-success">Centrales de Monitoreo:</h1>
-    <table class="table table-hover">
-        <thead>
-            <tr>
-            <th scope="col">Central</th>
-            <th scope="col">Barrio</th>
-            <th scope="col">Estado</th>
-            <th scope="col">Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="{{central.estado == 1 ? 'table-success' : 'table-danger'}}" *ngFor="let central of centrales" >
-            <td>{{central.id}}</td>
-            <td>{{central.barrio}}</td>
-            <td>{{estados[central.estado]}}</td>
-            <td>Acciones</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container-fluid">
+    <h1 class="text-warning">Panel de Administración</h1>
 </div>
+
+
+<router-outlet></router-outlet>

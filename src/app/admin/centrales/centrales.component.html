@@ -1,0 +1,43 @@
+
+<!-- Ver todas las centrales -->
+<div class="container" *ngIf="estadoActualComponente==0">
+  <h2 class="text-success">Centrales de Monitoreo:</h2>
+  <table class="table table-hover">
+      <thead>
+          <tr>
+          <th scope="col">Central</th>
+          <th scope="col">Barrio</th>
+          <th scope="col">Estado</th>
+          <th scope="col">Acciones</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="{{central.estado == 1 ? 'table-success' : 'table-danger'}}" *ngFor="let central of centrales">
+          <td>{{central.id}}</td>
+          <td>{{central.barrio}}</td>
+          <td>{{estados[central.estado]}}</td>
+          <td><button class="btn btn-warning" (click)="verCentral(central.id)">Ver</button></td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+<!-- Central en específico -->
+<div class="container" *ngIf="estadoActualComponente==1">
+  <h2 class="text-success">Historial de la central: {{ centralIdSeleccionada }}</h2>
+  <button class="btn btn-primary" (click)="verCentrales()">Volver</button>
+  <table class="table table-hover">
+      <thead>
+          <tr>
+          <th scope="col">Fecha</th>
+          <th scope="col">Log</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="{{log.estado == 1 ? 'table-success' : 'table-danger'}}" *ngFor="let log of datosHistorial">
+          <td>{{log.fecha | date: 'dd/MMM/yyyy. H:m:s'}}</td>
+          <td>{{estados[log.estado]}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

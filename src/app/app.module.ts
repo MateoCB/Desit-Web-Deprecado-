@@ -9,13 +9,15 @@ import { InicioComponent } from './inicio/inicio.component';
 import { AcercaComponent } from './acerca/acerca.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
+import { CentralesComponent } from './admin/centrales/centrales.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
     AcercaComponent,
-    AdminComponent
+    AdminComponent,
+    CentralesComponent
   ],
   imports: [
     BrowserModule,
